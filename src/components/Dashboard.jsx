@@ -83,7 +83,7 @@ export default function Dashboard({ user, profile }) {
       </div>
 
       {/* Floating settings */}
-      <Link to="/settings" className="fixed top-4 right-4 btn-ghost !px-3 !py-2 backdrop-blur" aria-label="Настройки">⚙</Link>
+      <Link to="/settings" className="fixed top-20 right-4 btn-ghost !px-3 !py-2 backdrop-blur" aria-label="Настройки">⚙</Link>
 
       {/* Add button */}
       <button
