@@ -84,7 +84,8 @@ export default function Dashboard({ user, profile }) {
       {/* Add button */}
       <button
         onClick={() => setShowAdd(true)}
-        className="fixed bottom-20 left-1/2 -translate-x-1/2 btn !px-6 !py-3 shadow-2xl shadow-accent/20 z-30"
+        style={{ bottom: 'calc(env(safe-area-inset-bottom) + 80px)' }}
+        className="fixed left-1/2 -translate-x-1/2 btn !px-6 !py-3 shadow-2xl shadow-accent/20 z-30"
       >
         + Добавить еду
       </button>
