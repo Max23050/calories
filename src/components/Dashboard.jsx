@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import ProgressRing from './ProgressRing'
 import MacroBar from './MacroBar'
 import MealCard from './MealCard'
@@ -82,13 +81,10 @@ export default function Dashboard({ user, profile }) {
         ))}
       </div>
 
-      {/* Floating settings */}
-      <Link to="/settings" className="fixed top-20 right-4 btn-ghost !px-3 !py-2 backdrop-blur" aria-label="Настройки">⚙</Link>
-
       {/* Add button */}
       <button
         onClick={() => setShowAdd(true)}
-        className="fixed bottom-6 left-1/2 -translate-x-1/2 btn !px-6 !py-3 shadow-2xl shadow-accent/20"
+        className="fixed bottom-20 left-1/2 -translate-x-1/2 btn !px-6 !py-3 shadow-2xl shadow-accent/20 z-30"
       >
         + Добавить еду
       </button>

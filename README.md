@@ -21,7 +21,9 @@ npm run dev
 ## Supabase setup
 
 1. Create a project at [supabase.com](https://supabase.com).
-2. Run the SQL migration from `supabase/migrations/001_initial.sql` in the SQL editor (it creates tables, RLS policies, and the `meal-photos` storage bucket).
+2. Run the SQL migrations from `supabase/migrations/` in order in the SQL editor:
+   - `001_initial.sql` — profiles, meal_entries, RLS, `meal-photos` storage bucket
+   - `002_friends.sql` — friendships table, RPC `get_friend_daily_summary`, `avatars` storage bucket, public profile read policy
 3. Deploy the Edge Function:
    ```bash
    supabase functions deploy analyze-food
