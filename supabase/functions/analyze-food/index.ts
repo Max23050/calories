@@ -14,17 +14,15 @@ const CORS = {
 }
 
 const SYSTEM_PHOTO =
-  'You are a professional nutritionist. Identify every dish and food item in the photo. ' +
-  'For each item return JSON: {name: string, calories: number, protein: number, fat: number, carbs: number, weight_g: number}. ' +
-  'Return the name in the same language the user uses. ' +
-  'Respond ONLY with a valid JSON array, no markdown, no explanation.'
+  'Ты нутрициолог. Определи все блюда и продукты на фото. Для каждого верни JSON: ' +
+  '{name: string, calories: number, protein: number, fat: number, carbs: number, weight_g: number}. ' +
+  'Отвечай ТОЛЬКО валидным JSON-массивом, без markdown.'
 
 const SYSTEM_TEXT =
-  'You are a nutritionist assistant. The user describes what they ate. Analyze and return a JSON array of dishes: ' +
+  'Ты нутрициолог-ассистент. Пользователь описывает что съел. Проанализируй и верни JSON-массив блюд: ' +
   '[{name, calories, protein, fat, carbs, weight_g}]. ' +
-  'If the user did not specify weight, use a standard portion size. ' +
-  'Return names in the same language the user writes in. ' +
-  'Respond ONLY with a valid JSON array, no markdown, no explanation.'
+  'Если пользователь не указал вес — используй стандартную порцию. ' +
+  'Отвечай ТОЛЬКО валидным JSON-массивом.'
 
 function extractJson(text: string): any {
   // Try direct parse, then extract first [...] block.
